@@ -1,0 +1,7 @@
+*.log
+*.lock
+*.zip
+node_modules
+prod
+
+

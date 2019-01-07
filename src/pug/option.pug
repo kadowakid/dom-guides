@@ -1,0 +1,96 @@
+- const version = json.version
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" type="text/css" href="./css/option.css")
+    title DOM Guides
+  body
+    .wrapper
+      header
+        h1
+          img.logo(src='./icons/icon128.png')
+          span DOM Guides
+          p #{version}
+          ul
+            li 設定
+            li 使い方
+      ul.main
+        li
+          nav
+            | 設定
+          dl.settings
+            dd
+              label
+                input(type="checkbox" name="autoFlag")
+                span
+                | ページ読み込み時に自動で取得する
+            dd
+              label
+                input(type="checkbox" name="padding")
+                span
+                | border+paddingにガイドを引く
+            dd
+              label
+                input(type="checkbox" name="inline")
+                span
+                | インライン要素を取得する
+            dd
+              label
+                input(type="checkbox" name="setColorFlag")
+                span
+                | ガイドの色を設定する
+              p
+                | ガイド色
+                input(type='color' name="baseColor")
+                br
+                | フォーカス色
+                input(type='color' name="focusColor")
+            dd
+              label
+                input(type="checkbox" name="filter")
+                span
+                | クエリを指定して要素を取得する
+              p
+                | document.querySelectorAll('
+                input(type="text" name="query")
+                | ')
+            dd
+              label
+                input(type="checkbox" name="limitFlag")
+                span
+                | ガイドの上限数を設定する
+              p
+                input(type="text" name="limit")
+            dd
+              label
+                input(type="checkbox" name="guideHideFlag")
+                span  
+                | DOMのガイドを表示しない
+                br
+                | （ユーザーで設定したガイドのみを使用する場合は、チェックしてください）
+        li
+          nav
+            | 使い方
+          dl.usage
+            dt
+              | DOM Guides 使い方
+            dd
+              | DOM Guidesは、DOM上の要素に自動でガイドを引くGoogle Chrome 拡張機能です。
+              br
+              | この拡張機能を使用することで、各要素間の距離を計測することができます。
+              br
+              | アドレスバーの右のアイコンをクリックすることで、on/offを切り替えることができます。
+            dt
+              | ユーザーでガイドを追加する
+            dd
+              | ユーザー側が自由にガイドを追加することもできます。DOM Guidesを起動した状態で、Shiftキーを押しながら上下左右にマウスをドラッグすることで、ガイドを追加できます。また、ユーザーで追加したガイドはShiftキーを押しながら
+              | ドラッグすることで、移動させることもできます。ガイドを選択した状態でDeleteキーを押すと、ガイドが削除されます。
+            dt
+              | 注意
+            dd
+              | この拡張機能は、DOMに大量の要素を追加するため、ページによっては動作が非常に重くなる場合があります。オプションでガイドの数を減らす項目をいくつか用意していますので、必要に応じて設定を変更してください。
+              br
+              | 現在の仕様ではiframeタグ内部の要素を取得していません。また要素内スクロールには対応していませんので、その旨ご了承ください。
+    script(src="./js/option.js")
+    

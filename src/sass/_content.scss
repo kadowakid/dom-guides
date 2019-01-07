@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import "./reset";
+
+:host {
+    position:absolute!important;
+    top:0!important;
+    left:0!important;
+    pointer-events:none!important;
+    z-index: 100000!important;
+    .root {
+        overflow: hidden!important;
+        pointer-events: none!important;
+        
+        * {
+            color: #000!important;
+            pointer-events: auto!important;
+            line-height: 1!important;
+            font-size: 12px!important;
+            font-family: 'Noto Sans', sans-serif!important;
+            letter-spacing: 0!important;
+        }
+    
+        .lineBox,
+        .userLineBox {
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 100000;
+    
+            div {
+                position: absolute;
+                cursor: pointer;
+    
+                span {
+                    display: block;
+                    position: relative;
+                    background: #0ff;
+                }
+    
+                &.typeX {
+                    height: 1px;
+                    border-top: 1px solid #0ff;
+                    left: 0;
+                    z-index: 100001;
+                }
+    
+                &.typeY {
+                    width: 1px;
+                    top: 0;
+                    border-left: 1px solid #0ff;
+                    z-index: 100001;
+                }
+            }
+        }
+    
+        .lineSize {
+            position: absolute;
+            z-index: 100010;
+    
+            .supportLine {
+                position: fixed;
+                width: 1px;
+                height: 1px;
+            }
+    
+            .sizeBox {
+                position: fixed;
+                border: 1px solid #333;
+                color: #333;
+                padding: 6px;
+                background: rgba(255, 255, 255, .95);
+                font-size: 12px;
+                min-width: 50px;
+                box-sizing: border-box;
+                text-align: center;
+            }
+        }
+    }
+}
+

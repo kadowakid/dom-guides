@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "build": "gulp && yarn run zip",
+    "start": "gulp watch",
+    "zip": "bestzip dom-guides.zip prod/*"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.1",
+    "bestzip": "^2.1.2",
+    "css-loader": "^2.0.2",
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.3.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "jquery": "^3.3.1",
+    "jsonfile": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "raw-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.2.1"
+  }
+}
