@@ -286,7 +286,7 @@ class DomGuides extends HTMLElement {
             }
         });
         chrome.storage.onChanged.addListener(() => {
-            getOption().then(()=>{
+            getOption().then(() => {
                 this.settings();
             });
         });

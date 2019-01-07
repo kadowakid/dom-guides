@@ -10,17 +10,20 @@ body {
     font-size: 12px;
     font-family: sans-serif;
     background: #666;
-    .wrapper{
+
+    .wrapper {
         header {
             border-bottom: 1px solid $baseColor;
             position: relative;
             line-height: 1;
             height: 70px;
             box-sizing: border-box;
+
             h1 {
                 max-width: 980px;
                 margin: 0 auto;
                 padding-top: 10px;
+
                 .logo {
                     display: inline-block;
                     width: 48px;
@@ -28,16 +31,18 @@ body {
                     vertical-align: middle;
                     margin-right: 10px;
                 }
+
                 span {
                     font-size: 36px;
                     line-height: 1;
                     display: inline-block;
                     vertical-align: middle;
                     font-weight: 600;
-                    font-family: 'Teko',sans-serif;
+                    font-family: 'Teko', sans-serif;
                     margin-top: 5px;
                     color: #fff;
                 }
+
                 p {
                     display: inline-block;
                     color: #fff;
@@ -46,38 +51,47 @@ body {
                     vertical-align: top;
                     padding-top: 24px;
                 }
+
                 ul {
-                    display:inline-block;
+                    display: inline-block;
                     margin-left: 70px;
                     vertical-align: middle;
+
                     li {
                         font-size: 18px;
                         color: #fff;
                         display: inline-block;
                         transition: .3s;
                         cursor: pointer;
+
                         &+li {
                             margin-left: 30px;
                         }
-                        &:hover,&.on {
+
+                        &:hover,
+                        &.on {
                             color: $accentColor;
                         }
                     }
                 }
             }
         }
+
         >ul {
             max-width: 980px;
             width: 980px;
             margin: 0 auto;
             font-size: 12px;
             box-sizing: border-box;
+
             li {
                 margin-top: 30px;
                 position: relative;
+
                 &+li {
                     display: none;
                 }
+
                 nav {
                     text-align: center;
                     font-size: 14px;
@@ -89,41 +103,52 @@ body {
                     box-sizing: border-box;
                     position: absolute;
                     top: 0;
-                    left:0;
+                    left: 0;
                     color: #fff;
-                    background: rgba(255,255,255,.1);
+                    background: rgba(255, 255, 255, .1);
                 }
+
                 dl {
                     padding: 30px 30px;
                     margin-left: 130px;
                     border: 1px solid $baseColor;
                     color: #fff;
-                    background: rgba(255,255,255,.1);
+                    background: rgba(255, 255, 255, .1);
+
                     dt {
                         font-size: 18px;
                         font-weight: 600;
                         padding-bottom: 15px;
                     }
+
                     dd {
                         display: flex;
                         align-items: center;
-                        &+dd{
+
+                        &+dd {
                             margin-top: 20px;
                         }
+
                         &+dt {
                             margin-top: 30px;
                         }
+
                         label {
                             display: flex;
                             cursor: pointer;
-                            input[type="checkbox"]{
-                                display:none;
+
+                            input[type="checkbox"] {
+                                display: none;
+
                                 &:checked+span {
-                                    &:before,&:after {
+
+                                    &:before,
+                                    &:after {
                                         opacity: 1;
                                     }
                                 }
                             }
+
                             span {
                                 display: inline-block;
                                 vertical-align: middle;
@@ -135,13 +160,16 @@ body {
                                 margin-right: 15px;
                                 margin-top: 2px;
                                 background: #fff;
-                                &:before,&:after {
+
+                                &:before,
+                                &:after {
                                     opacity: 0;
                                     transition: .3s;
                                     position: absolute;
                                     content: '';
                                     background: $accentColor;
                                 }
+
                                 &:before {
                                     width: 4px;
                                     height: 8px;
@@ -150,6 +178,7 @@ body {
                                     transform: rotate(-45deg);
                                     transform-origin: top top;
                                 }
+
                                 &:after {
                                     width: 4px;
                                     height: 14px;
@@ -160,12 +189,14 @@ body {
                                 }
                             }
                         }
+
                         p {
                             display: none;
                             padding: 15px 15px;
                             background: #999;
                             margin-left: 20px;
-                            input[type="color"]{
+
+                            input[type="color"] {
                                 background: transparent;
                                 padding: 0;
                                 border: 0;
@@ -173,7 +204,8 @@ body {
                                 height: 20px;
                                 border-radius: 50%;
                             }
-                            input[type="text"]{
+
+                            input[type="text"] {
                                 width: 60px;
                                 background: #fff;
                                 border: none;
