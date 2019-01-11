@@ -134,7 +134,7 @@ class DomGuides extends HTMLElement {
             const transparent = transparentList[i];
             const style = getComputedStyle(current);
             const inlineFlag = !props.inline && style.display === 'inline';
-            if (height !== 0 && width !== 0 && !transparent && !inlineFlag) {
+            if (height && width && !transparent && !inlineFlag) {
                 const offsetX = rect.left + scrollX;
                 const offsetY = rect.top + scrollY;
                 const fixed = fixedList[i];

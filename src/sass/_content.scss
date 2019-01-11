@@ -32,12 +32,6 @@
                 position: absolute;
                 cursor: pointer;
 
-                span {
-                    display: block;
-                    position: relative;
-                    background: #0ff;
-                }
-
                 &.typeX {
                     height: 1px;
                     border-top: 1px solid #0ff;
