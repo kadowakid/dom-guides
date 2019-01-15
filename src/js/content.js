@@ -95,6 +95,7 @@ class DomGuides extends HTMLElement {
             this.root.style.width = width + 'px';
             this.root.style.height = height + 'px';
             this.size = [width, height];
+            this.focusGuide = false;
             resolve();
         });
     }
@@ -134,7 +135,7 @@ class DomGuides extends HTMLElement {
             const transparent = transparentList[i];
             const style = getComputedStyle(current);
             const inlineFlag = !props.inline && style.display === 'inline';
-            if (height && width && !transparent && !inlineFlag) {
+            if (height !== 0 && width !== 0 && !transparent && !inlineFlag) {
                 const offsetX = rect.left + scrollX;
                 const offsetY = rect.top + scrollY;
                 const fixed = fixedList[i];
